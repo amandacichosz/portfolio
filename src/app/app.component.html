@@ -1,5 +1,17 @@
-<app-header></app-header>
-<app-homepage></app-homepage>
-<app-about-me></app-about-me>
-<app-projects></app-projects>
-<app-skills></app-skills>
+<app-header [items]="navItems"></app-header>
+
+<main class="page-shell">
+  <section id="home" class="hero-section">
+    <app-homepage></app-homepage>
+  </section>
+
+  @for (section of sections; track section.id) {
+    <app-lazy-section
+      [sectionId]="section.id"
+      [eyebrow]="section.eyebrow"
+      [title]="section.title"
+      [description]="section.description"
+      [loadComponent]="section.loader"
+    />
+  }
+</main>

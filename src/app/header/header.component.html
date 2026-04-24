@@ -1,12 +1,9 @@
-<!-- <div>AC</div> -->
+<header class="site-header">
+  <a class="brand" href="#home">AC</a>
 
-<div class="links">
-  <a>About</a>
-  <a>Projects</a>
-  <a>Experience</a>
-  <a>Skills</a>
-  <a>Resume</a>
-</div>
-<!-- <div class="headshot headshot-2">
-  <div class="inner">A</div>
-</div> -->
+  <nav class="links" aria-label="Primary">
+    @for (item of items; track item.href) {
+      <a [href]="item.href">{{ item.label }}</a>
+    }
+  </nav>
+</header>

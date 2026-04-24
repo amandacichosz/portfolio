@@ -14,16 +14,23 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have the 'portfolio' title`, () => {
+  it('should expose the one-page navigation items', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('portfolio');
+    expect(app.navItems.map((item) => item.label)).toEqual([
+      'Home',
+      'About',
+      'Projects',
+      'Skills'
+    ]);
   });
 
-  it('should render title', () => {
+  it('should render the hero headline', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, portfolio');
+    expect(compiled.querySelector('h1')?.textContent).toContain(
+      'Angular developer building thoughtful, clean web experiences.'
+    );
   });
 });

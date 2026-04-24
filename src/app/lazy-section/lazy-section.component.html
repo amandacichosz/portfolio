@@ -1,0 +1,19 @@
+<section #sectionRef [id]="sectionId" class="lazy-section">
+  <div class="section-copy">
+    <p class="eyebrow">{{ eyebrow }}</p>
+    <h2>{{ title }}</h2>
+    <p class="description">{{ description }}</p>
+  </div>
+
+  @if (!isLoaded) {
+    <div class="skeleton" [class.skeleton--active]="isVisible" aria-hidden="true">
+      <div class="skeleton__card skeleton__card--wide"></div>
+      <div class="skeleton__row">
+        <div class="skeleton__card"></div>
+        <div class="skeleton__card"></div>
+      </div>
+    </div>
+  }
+
+  <ng-container #contentHost></ng-container>
+</section>

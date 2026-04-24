@@ -1,0 +1,91 @@
+:host {
+  display: block;
+}
+
+.lazy-section {
+  scroll-margin-top: 6rem;
+  padding: 4.5rem 0;
+}
+
+.section-copy {
+  max-width: 42rem;
+  margin-bottom: 1.75rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.75rem;
+  color: var(--accent);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+h2 {
+  margin: 0;
+  color: var(--text-main);
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: 0.95;
+}
+
+.description {
+  margin: 1rem 0 0;
+  color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.skeleton {
+  display: grid;
+  gap: 1rem;
+  opacity: 0.66;
+}
+
+.skeleton__row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.skeleton__card {
+  min-height: 11rem;
+  border: 1px solid rgba(183, 140, 255, 0.14);
+  border-radius: 1.5rem;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(183, 140, 255, 0.03) 20%,
+      rgba(183, 140, 255, 0.12) 50%,
+      rgba(183, 140, 255, 0.03) 80%
+    ),
+    rgba(255, 255, 255, 0.02);
+  background-size: 220% 100%;
+}
+
+.skeleton__card--wide {
+  min-height: 15rem;
+}
+
+.skeleton--active .skeleton__card {
+  animation: shimmer 1.4s linear infinite;
+}
+
+@keyframes shimmer {
+  from {
+    background-position: 200% 0;
+  }
+
+  to {
+    background-position: -20% 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .lazy-section {
+    padding: 3.5rem 0;
+  }
+
+  .skeleton__row {
+    grid-template-columns: 1fr;
+  }
+}
