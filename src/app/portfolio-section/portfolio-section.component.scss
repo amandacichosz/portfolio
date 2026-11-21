@@ -1,0 +1,42 @@
+:host {
+  display: block;
+}
+
+.portfolio-section {
+  scroll-margin-top: 6rem;
+  padding: 4.5rem 0;
+}
+
+.section-copy {
+  max-width: 42rem;
+  margin-bottom: 1.75rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.75rem;
+  color: var(--accent);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+h2 {
+  margin: 0;
+  color: var(--text-main);
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: 0.95;
+}
+
+.description {
+  margin: 1rem 0 0;
+  color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+@media (max-width: 700px) {
+  .portfolio-section {
+    padding: 3.5rem 0;
+  }
+}

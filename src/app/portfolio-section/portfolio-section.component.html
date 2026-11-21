@@ -1,0 +1,11 @@
+<section [id]="sectionId" class="portfolio-section">
+  <div class="section-copy">
+    <p class="eyebrow">{{ eyebrow }}</p>
+    <h2>{{ title }}</h2>
+    @if (description) {
+      <p class="description">{{ description }}</p>
+    }
+  </div>
+
+  <ng-content></ng-content>
+</section>

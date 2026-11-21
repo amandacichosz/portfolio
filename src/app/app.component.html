@@ -5,13 +5,25 @@
     <app-homepage></app-homepage>
   </section>
 
-  @for (section of sections; track section.id) {
-    <app-lazy-section
-      [sectionId]="section.id"
-      [eyebrow]="section.eyebrow"
-      [title]="section.title"
-      [description]="section.description"
-      [loadComponent]="section.loader"
-    />
-  }
+  <app-portfolio-section sectionId="about" eyebrow="About Me" title="Hi, I’m Amanda.">
+    <app-about-me></app-about-me>
+  </app-portfolio-section>
+
+  <app-portfolio-section
+    sectionId="projects"
+    eyebrow="Selected Projects"
+    title="Things I have designed, shipped, and improved"
+    description="A few highlights that show product thinking, execution, and craft."
+  >
+    <app-projects></app-projects>
+  </app-portfolio-section>
+
+  <app-portfolio-section
+    sectionId="skills"
+    eyebrow="Skills"
+    title="Tools and strengths I bring to a team"
+    description="Languages, frameworks, and tools I use to build for the web."
+  >
+    <app-skills></app-skills>
+  </app-portfolio-section>
 </main>

@@ -1,17 +1,49 @@
 <div class="projects-grid">
   <article class="project-card">
-    <p class="project-card__tag">Featured</p>
-    <h3>Portfolio Platform Refresh</h3>
+    <div class="project-card__meta">
+      <span class="project-card__tag">Vue 3 · TypeScript</span>
+      <span class="project-card__status">In progress</span>
+    </div>
+    <h3>Pixlet</h3>
     <p>
-      Redesigned a personal site into a one-page experience with component-driven
-      sections, focused copy, and smoother load behavior.
+      My component library for Vue 3, with themeable buttons, cards, headers,
+      and links. The docs include interactive examples, and I use Playwright
+      and axe to check accessibility in the browser.
     </p>
     <a
       class="project-card__link"
-      href="#home"
+      href="https://pixlet-ckb.pages.dev/"
+      target="_blank"
       rel="noreferrer"
     >
-      View
+      Explore Pixlet
+    </a>
+  </article>
+
+  <article class="project-card">
+    <p class="project-card__tag">Accessibility · Vue</p>
+    <h3>A11y Scan Bookmarklet</h3>
+    <p>
+      In a
+      <a class="project-card__source" href="https://alphagov.github.io/accessibility-tool-audit/">2018 UK government audit</a>,
+      the top automated accessibility tools detected about 30–40% of the 142
+      barriers tested. I built A11y Scan to make deeper testing easier while
+      developing Vue components.
+    </p>
+    <p>
+      When Vue exposes component metadata, the bookmarklet groups findings by
+      component and shows where each one sits in the component tree. It can
+      also show the source file when available. Alongside axe-core and custom
+      checks, it helps you inspect keyboard focus and run delayed scans for
+      states like an open dialog or a validation error.
+    </p>
+    <a
+      class="project-card__link"
+      href="https://pixlet-ckb.pages.dev/guide/accessibility#install-the-bookmarklet"
+      target="_blank"
+      rel="noreferrer"
+    >
+      Get the bookmarklet in Pixlet
     </a>
   </article>
 
@@ -31,7 +63,7 @@
       target="_blank"
       rel="noreferrer"
     >
-      View
+      View SportsEngine library
     </a>
   </article>
 
@@ -49,7 +81,17 @@
       target="_blank"
       rel="noreferrer"
     >
-      View
+      Open recipe app
     </a>
+  </article>
+
+  <article class="project-card">
+    <p class="project-card__tag">Angular</p>
+    <h3>Portfolio Platform Refresh</h3>
+    <p>
+      Redesigned a personal site into a one-page experience with component-driven
+      sections, focused copy, and smoother load behavior.
+    </p>
+    <a class="project-card__link" href="#home">Back to the homepage</a>
   </article>
 </div>
